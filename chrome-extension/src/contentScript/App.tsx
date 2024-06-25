@@ -59,7 +59,8 @@ let data = [
      "Company": "excelapts.com",
      "Email address": "Not found",
      "position":"Salesforce Administrator",
-     "profile_img":"https://media.licdn.com/dms/image/D4E03AQGeIGZ0B-gwAw/profile-displayphoto-shrink_200_200/0/1690082477657?e=1724889600&v=beta&t=vgmblbQDaTKS274AQsJSZBg6KFRaAi8IbzdhB3sw5mM",
+     "profile_img":"https://media.licdn.com/dms/image/D4E03AQEH1fH08MRv2g/profile-displayphoto-shrink_200_200/0/1707436051644?e=1724889600&v=beta&t=1dMVZj2-Cg_HSOti4mmMYeOrCkLtwWtKAvPiduj8DhM",
+
      "status": "invalid",
      "Folder": 1
     },
@@ -69,7 +70,8 @@ let data = [
        "Company": "hilton.com",
        "Email address": "nimi.p@hilton.com",
        "position":"Salesforce Administrator",
-       "profile_img":"https://media.licdn.com/dms/image/D4E03AQEH1fH08MRv2g/profile-displayphoto-shrink_200_200/0/1707436051644?e=1724889600&v=beta&t=1dMVZj2-Cg_HSOti4mmMYeOrCkLtwWtKAvPiduj8DhM",
+       "profile_img":"https://media.licdn.com/dms/image/D4E03AQGeIGZ0B-gwAw/profile-displayphoto-shrink_200_200/0/1690082477657?e=1724889600&v=beta&t=vgmblbQDaTKS274AQsJSZBg6KFRaAi8IbzdhB3sw5mM",
+
        "status": "valid",
        "Folder": 1
       },
@@ -222,16 +224,7 @@ let data = [
     },
     
     
-    {
-     "FirstName": "Svetlana",
-     "LastName": "Kirienko",
-     "Company": "onilab.com",
-     "Email address": "svetlana.kirienko@onilab.com",
-     "position":"Senior Salesforce Administrator",
-     "profile_img":"https://media.licdn.com/dms/image/C4D03AQELtmiLzKU5wQ/profile-displayphoto-shrink_200_200/0/1558689771693?e=1724889600&v=beta&t=6gei64HrRgswHzqOUiwi_FRiVlYWVU8njQqtmcxi2p4",
-     "status": "catch-all",
-     "Folder": 2
-    },
+   
     
     {
      "FirstName": "Noa",
@@ -249,7 +242,7 @@ let data = [
        "Company": "pentegra.com",
        "Email address": "Not found",
        "position":"Senior Salesforce Administrator",
-       "profile_img":"https://media.licdn.com/dms/image/C5603AQFDnnk5taX73A/profile-displayphoto-shrink_200_200/0/1517041330636?e=1724889600&v=beta&t=g-QBX5dv09daRrqXWOGVHQGT8tJVoKJkFH_4djWQv-o",
+       "profile_img":"https://media.licdn.com/dms/image/D5603AQHrmtPV7lTaBQ/profile-displayphoto-shrink_200_200/0/1679341240415?e=1724889600&v=beta&t=xqjNWOSQ-9bV1oGzNPQ-ZxWPMjU5TTfHi4gIFT5Tftw",
        "status": "Invalid",
        "Folder": 3
       },
@@ -315,14 +308,7 @@ let data = [
        "Folder": 1
       },
       ]
-      data=data.map(entry => {
-        const dotIndex = entry["Company"].indexOf('.');
-        if (dotIndex !== -1) {
-          entry["Company"]=entry["Company"].slice(0, dotIndex);
-        }
-        return entry;
-    });
-  
+      
 
 
 
