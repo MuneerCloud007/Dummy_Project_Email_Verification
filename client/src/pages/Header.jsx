@@ -36,7 +36,7 @@ export default function Header() {
               />
             </svg>
           </span> */}
-          <Link className="font-bold" to={"/"}>CloudVandana</Link>
+          <Link className="font-bold" to={"/"}>VivaLaSales</Link>
         </div>
         <div className="hidden grow items-start lg:flex">
           <ul className="ml-12 inline-flex space-x-8">

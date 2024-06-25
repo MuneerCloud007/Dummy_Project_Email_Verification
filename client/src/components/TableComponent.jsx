@@ -85,6 +85,8 @@ const Pagination = ({
     (_, index) => index + 1
   );
 
+  console.log("Total number of pages:", totalNumberOfPages);
+
   const renderPageNumbers = () => {
     if (totalNumberOfPages <= maxPageNumbers) {
       return pageNumbers;
@@ -104,8 +106,8 @@ const Pagination = ({
       return [1, "...", ...pageNumbers.slice(-maxPageNumbers + 1)];
     } else {
       // Display pages around the current page
-      const startPage = currentPage - middleIndex + 1;
-      const endPage = currentPage + middleIndex - 1;
+      const startPage = currentPage - middleIndex;
+      const endPage = currentPage + middleIndex;
       return [
         1,
         "...",
@@ -116,47 +118,46 @@ const Pagination = ({
     }
   };
 
+  const handleButtonClick = (pageNumber) => {
+    console.log("Clicked page number:", pageNumber);
+    handlePageChange(pageNumber);
+  };
+
   return (
-    <div className=" flex  justify-between px-4 items-center my-5" >
+    <div className="flex justify-between px-4 items-center my-5">
       <div className="show">
         Showing 1 to {totalNumberOfPages} of {totalNumberOfPages} entries
       </div>
-      <div className="  text-end">
+      <div className="text-end">
         <ul className="pagination flex join">
           <li className="page-item join-item btn">
-            <button
+            <a
               className={"page-link " + (currentPage === 1 ? "disabled" : "")}
-              onClick={() => handlePageChange(1)}
+              onClick={() => handleButtonClick(1)}
               disabled={currentPage === 1}
-            >{`<`}</button>
+            >{`<`}</a>
           </li>
           {renderPageNumbers().map((pageNumber, index) => (
             <li key={index} className="page-item join-item btn">
               <button
                 className={`page-link ${currentPage === pageNumber ? "active" : ""}`}
-                onClick={() =>{ 
-                  
-                  console.log("Page number");
-                  console.log(pageNumber);
-                  handlePageChange(pageNumber)
-
-                }}
+                onClick={() => handleButtonClick(pageNumber)}
+                disabled={pageNumber === "..."}
               >
                 {pageNumber}
               </button>
             </li>
           ))}
           <li className="page-item join-item btn">
-            <button
+            <a
               className={"page-link " + (currentPage === totalNumberOfPages ? "disabled" : "")}
-              onClick={() => handlePageChange(totalNumberOfPages)}
+              onClick={() => handleButtonClick(totalNumberOfPages)}
               disabled={currentPage === totalNumberOfPages}
-            >{`>`}</button>
+            >{`>`}</a>
           </li>
         </ul>
       </div>
     </div>
-
   );
 };
 
