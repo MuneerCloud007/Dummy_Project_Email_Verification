@@ -123,10 +123,10 @@ const Pagination = ({
       </div>
       <div className="col-md-3 col-sm-12 text-end">
         <div className="pagination flex list-none join">
-          <li className="page-item join-item btn">
+          <li className="page-item">
             <button
-              className={"page-link " + (currentPage === 1 ? "disabled" : "")}
-              onClick={() => handlePageChange(1)}
+              className={"page-link join-item btn " + (currentPage === 1 ? "disabled" : "")}
+              onClick={(e) => handlePageChange(e,1)}
               disabled={currentPage === 1}
             >{`<`}</button>
           </li>
@@ -136,7 +136,7 @@ const Pagination = ({
                 className={`page-link ${
                   currentPage === pageNumber ? "active" : ""
                 } join-item btn`}
-                onClick={() => handlePageChange(pageNumber)}
+                onClick={(e) => handlePageChange(e,pageNumber)}
               >
                 {pageNumber}
               </button>
@@ -148,7 +148,7 @@ const Pagination = ({
                 "page-link " + "join-item btn "+
                 (currentPage === totalNumberOfPages ? "disabled" : "")
               }
-              onClick={() => handlePageChange(totalNumberOfPages)}
+              onClick={(e) => handlePageChange(e,totalNumberOfPages)}
               disabled={currentPage === totalNumberOfPages}
             >{`>`}</button>
           </li>
@@ -176,8 +176,10 @@ const Table = ({ headers, data, isLoading, loadingTag }) => {
 
   const totalNumberOfPages = Math.ceil(filteredData.length / itemsPerPage);
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = (e,pageNumber) => {
+    if(e.target.textContent!=="...") {
     setCurrentPage(pageNumber);
+    }
   };
 
   const handleSortColumnChange = (column) => {
