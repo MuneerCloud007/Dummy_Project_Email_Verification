@@ -145,7 +145,7 @@ const Pagination = ({
           <li className="page-item">
             <button
               className={
-                "page-link " + "join-item btn"+
+                "page-link " + "join-item btn "+
                 (currentPage === totalNumberOfPages ? "disabled" : "")
               }
               onClick={() => handlePageChange(totalNumberOfPages)}
