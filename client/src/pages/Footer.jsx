@@ -20,7 +20,7 @@ export default function Footer() {
                     fill="black"
                   />
                 </svg>
-                <span className="ml-4 text-lg font-bold">DevUI</span>
+                <span className="ml-4 text-lg font-bold">VivaLaSales</span>
               </div>
             </a>
           </div>
