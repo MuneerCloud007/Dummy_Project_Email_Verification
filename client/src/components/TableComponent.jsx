@@ -94,14 +94,35 @@ const Pagination = ({
 
     if (currentPage <= middleIndex) {
       // Display pages from 1 to maxPageNumbers
+      if(currentPage==1){
+        return [
+        
+          "...",
+          ...pageNumbers.slice(1, maxPageNumbers - 1),
+          totalNumberOfPages,
+        ];
+      }
+      return [
+        
+        ...pageNumbers.slice(0, maxPageNumbers - 1),
+        "...",
+        totalNumberOfPages,
+      ];
+    
+    } else if (currentPage >= totalNumberOfPages - middleIndex) {
+      // Display pages from totalNumberOfPages - maxPageNumbers + 2 to totalNumberOfPages
+      if(currentPage == totalNumberOfPages) {
+        return [
+          ...pageNumbers.slice(0, maxPageNumbers ),
+          "...",
+        ]; 
+      }
       return [
         ...pageNumbers.slice(0, maxPageNumbers - 1),
         "...",
         totalNumberOfPages,
       ];
-    } else if (currentPage >= totalNumberOfPages - middleIndex) {
-      // Display pages from totalNumberOfPages - maxPageNumbers + 2 to totalNumberOfPages
-      return [1, "...", ...pageNumbers.slice(-maxPageNumbers + 1)];
+     
     } else {
       // Display pages around the current page
       const startPage = currentPage - middleIndex + 1;

@@ -44,7 +44,7 @@ export default function ErrorPage() {
                 />
               </svg>
             </span>
-            <span className="font-bold">DevUI</span>
+            <span className="font-bold">VivaLaSales</span>
           </div>
           <div className="hidden lg:block">
             <ul className="inline-flex space-x-8">
@@ -91,7 +91,7 @@ export default function ErrorPage() {
                           />
                         </svg>
                       </span>
-                      <span className="font-bold">DevUI</span>
+                      <span className="font-bold">VivaLaSales</span>
                     </div>
                     <div className="-mr-2">
                       <button
@@ -168,7 +168,7 @@ export default function ErrorPage() {
       {/* footer */}
       <div className="mx-auto flex max-w-7xl justify-center">
         <footer className="px-4 py-10">
-          <p className="text-base font-semibold text-gray-700">© 2023 DevUI Component Library</p>
+          <p className="text-base font-semibold text-gray-700">© 2024 VivaLaSales Company</p>
         </footer>
       </div>
     </div>

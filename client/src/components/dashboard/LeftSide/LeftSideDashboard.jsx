@@ -29,7 +29,6 @@ export default function SidebarOne() {
                             href="#"
                         >
                             <label
-                                onClick={() => document.getElementById('my_modal_5').showModal()}
                                 className=" btn rounded-md border bg-slate-50 border-green-600 px-3 py-2 text-sm font-semibold text-green-600 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 flex hover:bg-green-600 hover:text-white"
                             >
                                 <Plus className="h-5 w-5" aria-hidden="true" />
